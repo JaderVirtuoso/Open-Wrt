@@ -11,7 +11,13 @@ Conexão ethernet - eth0 (placa de rede do servidor, que recebe o link de intern
 Conexão ethernet - eth1 (placa de rede do servidor, que distribui o link para outras máquinas).
 
 ------------------------------------------------//---------------------------------------------------
+Regra DMZ simples
+A regra a seguir redireciona todas as portas WAN de todos os protocolos para o host interno 192.168.1.2.
 
+redirecionamento de configuração
+	opção src wan
+	opção proto todos
+	opção dest_ip 192.168.1.2
 
   ------------------------------------------------//---------------------------------------------------
   
