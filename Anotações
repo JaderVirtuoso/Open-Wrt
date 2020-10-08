@@ -1,0 +1,6 @@
+'Iniciar aplicação no boot:
+
+/etc/init.d/sqm enable
+/etc/init.d/sqm start
+exit 0
+
