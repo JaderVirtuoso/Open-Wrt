@@ -1,5 +1,5 @@
 
-Interface MTU 1400;
+Interface router MTU 1400; + Caso tenha Console, MTU 1320.
 ------------------------------------------------------------
 
 Instalar DNS HTTPS Proxy :
