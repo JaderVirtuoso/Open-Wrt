@@ -1,0 +1,36 @@
+
+Interface MTU 1400;
+------------------------------------------------------------
+
+Instalar DNS HTTPS Proxy :
+
+# Install packages
+opkg update
+opkg install luci-app-https-dns-proxy
+
+  Operar em OpenDNS e Quad 9 security.
+  
+----------------------------------------------------------- 
+ 
+  SQM:
+  Eth0.2 wan.
+  
+  Limitar download e upload em -10%.
+  Queuing disciplines: cake
+  Queue setup script: piece_of_cake.qos
+
+  and
+  
+  link layer: PPPOE: 27.
+  
+  Maximal Size for size and rate:1400
+  
+  Number of entries in size/rate tables, TSIZE: 128
+  
+  Minimal packet size: 64
+  
+  ------------------------------------------------------------
+  
+  
+  
+  
