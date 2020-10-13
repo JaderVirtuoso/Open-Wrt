@@ -13,19 +13,35 @@ Conexão ethernet - eth1 (placa de rede do servidor, que distribui o link para o
 ------------------------------------------------//---------------------------------------------------
 Bloquear faixa de IP
 
-Name: AWS
+Name: AWS/18
 
 PROTOCOL: ANY
 
-SOURCE ZONE: DEVICE OUTPUT
+SOURCE ZONE: LAN
 
-SOURCE ADDRESS: IP LOCAL
+SOURCE ADDRESS: 
 
 OUTPUT ZONE: WAN
 
-DESNINATION ADDRESS: 18.230.46.90  18.230.46.99 
+DESNINATION ADDRESS: 18.230.46.1/24
 
-ACTION: REJECT
+ACTION: DROP
+
+&&
+
+Name: AWS/18
+
+PROTOCOL: ANY
+
+SOURCE ZONE: WAN
+
+SOURCE ADDRESS: 18.230.46.1/24
+
+OUTPUT ZONE: LAN
+
+DESNINATION ADDRESS: 
+
+ACTION: DROP
 
 
 
