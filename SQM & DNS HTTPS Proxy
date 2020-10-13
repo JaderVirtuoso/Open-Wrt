@@ -1,12 +1,21 @@
 
-Interface router MTU 1400; E no Console, MTU 1320.
+Interface WAN = MTU 1400; E no Console, MTU = 1320.
 ------------------------------------------------------------
 
 Instalar DNS HTTPS Proxy :
 
- luci-app-https-dns-proxy
+luci-app-https-dns-proxy
 
-  Operar em OpenDNS e Quad 9 security.
+Operar em OpenDNS e Quad 9 security.
+
+Dar reload e aplicar.
+
+Conferir em: 
+
+DNS forwardings
+
+127.0.0.1#5053
+127.0.0.1#5054
   
 ----------------------------------------------------------- 
  
