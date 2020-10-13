@@ -1,12 +1,10 @@
 
-Interface router MTU 1400; + Caso tenha Console, MTU 1320.
+Interface router MTU 1400; E no Console, MTU 1320.
 ------------------------------------------------------------
 
 Instalar DNS HTTPS Proxy :
 
-# Install packages
-opkg update
-opkg install luci-app-https-dns-proxy
+ luci-app-https-dns-proxy
 
   Operar em OpenDNS e Quad 9 security.
   
@@ -23,12 +21,13 @@ opkg install luci-app-https-dns-proxy
   
   link layer: PPPOE: 27.
   
-  Maximal Size for size and rate:1400
+  Maximal Size for size and rate:1320
   
   Number of entries in size/rate tables, TSIZE: 128
   
   Minimal packet size: 64
   
+  cake
   ------------------------------------------------------------
   
   
