@@ -1,16 +1,17 @@
 
-Interface WAN = MTU 1400; E no Console, MTU = 1320.
+Interface WAN = MTU 1464
 ------------------------------------------------------------
 
 Instalar DNS HTTPS Proxy :
 
 luci-app-https-dns-proxy
 
-Operar em OpenDNS e Quad 9 security.
+Operar em OpenDNS e cloud flare.
 
-Dar reload e aplicar.
+
 
 Conferir em: 
+Interface dns: 127.0.0.1
 
 DNS forwardings
 
@@ -18,25 +19,34 @@ DNS forwardings
 127.0.0.1#5054
   
 ----------------------------------------------------------- 
+   SQM:
+  Eth0.2 wan.
+  Limitar download e upload : 10mb.
+  Queuing disciplines: cake
+  Queue setup script: piece_of_cake.qos
+  Link layer: PPPOE: 18.
+  
+  
  
   SQM:
-  Eth0.2 wan.
+  Eth0.1 lan.
   
-  Limitar download e upload em -10%.
+  Limitar download e upload : preferencia.em -10%.
   Queuing disciplines: cake
   Queue setup script: piece_of_cake.qos
 
-  and
+  &&
   
-  link layer: PPPOE: 27.
+  Maximal Size for size and rate:1500
   
-  Maximal Size for size and rate:1320
+  Number of entries in size/rate tables, TSIZE: 20
   
-  Number of entries in size/rate tables, TSIZE: 128
-  
-  Minimal packet size: 64
+  Minimal packet size: 20
   
   cake
+  
+  
+
   ------------------------------------------------------------
   
   
